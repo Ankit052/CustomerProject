@@ -11,7 +11,6 @@ class UserSerializer(serializers.ModelSerializer):
         fields = ["first_name","last_name","email","mobile_no"]
 
 class CustomerSerializer(serializers.ModelSerializer):
-    user = UserSerializer(read_only = True)
     class Meta :
         model = Customer
         fields = ["profile_number","user"]
